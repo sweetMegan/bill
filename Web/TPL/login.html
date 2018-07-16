@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>区块链票据</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="../Static/css/login.css">
+    <link rel="stylesheet" href="../Static/css/popout.css">
+    <script src="../Static/js/jquery.min.js" charset="utf-8"></script>
+    <script src="../Static/js/popout.js" charset="utf-8"></script>
+    <script type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+{{if .Flag}}
+    <div id="popout" style="display: block">
+        <div class="popout">
+            <div class="">用户名或密码输入错误!请重新输入</div>
+            <p><button type="button" name="button">好的</button></p>
+        </div>
+    </div>
+{{else}}
+    <div id="popout" style="display: none">
+        <div class="popout">
+            <div class="">用户名或密码输入错误!请重新输入</div>
+            <p><button type="button" name="button">好的</button></p>
+        </div>
+    </div>
+{{end}}
+
+    <form action="/login" method="post" >
+        <div class="login">
+            <h2>区块链票据</h2>
+            <input id="name" type="text" name="userName" value="" placeholder="请输入用户名">
+            <input id="pwd" type="text" name="password" value="" placeholder="请输入密码">
+            <input id="btn" type="submit"  value="登录">
+        </div>
+    </form>
+</div>
+</body>
+</html>
